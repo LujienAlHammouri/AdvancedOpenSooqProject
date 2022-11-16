@@ -315,6 +315,10 @@ class SiteController extends Controller
     {
         $model = Favourite::findOne(['id' => $id]);
         $model->delete();
-        return $this->redirect(['favourites', 'id' => $model->id]);
+        $user_id=Yii::$app->user->id;
+        $favourites=Favourite::find()->Where(['user_id'=>$user_id])->all();
+        return $this->render('favourites', [
+            'favourites' => $favourites,
+        ]);
     }
 }

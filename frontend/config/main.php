@@ -45,7 +45,6 @@ return [
                 'site/listing/<category_id>/<sub_category_id>' => 'site/listing',
                 'site/listing/<category_id>' => 'site/listing',
                 'site/view/<id>' =>'site/view',
-                'site/favourite/<post_id>' =>'site/favorite'
             ],
         ],
 
