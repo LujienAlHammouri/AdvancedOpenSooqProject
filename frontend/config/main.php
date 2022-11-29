@@ -51,3 +51,4 @@ return [
     ],
     'params' => $params,
 ];
+// autos/car-plates

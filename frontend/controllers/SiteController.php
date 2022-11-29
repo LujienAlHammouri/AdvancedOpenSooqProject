@@ -18,7 +18,6 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-use yii\web\NotFoundHttpException;
 
 /**
  * Site controller
@@ -317,8 +316,6 @@ class SiteController extends Controller
         $model->delete();
         $user_id=Yii::$app->user->id;
         $favourites=Favourite::find()->Where(['user_id'=>$user_id])->all();
-        return $this->render('favourites', [
-            'favourites' => $favourites,
-        ]);
+        return $this->redirect('my-favourites');
     }
 }

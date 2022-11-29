@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\web\YiiAsset;
-use common\models\Post;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
